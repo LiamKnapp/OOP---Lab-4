@@ -63,24 +63,25 @@ public:
 
 	void Print() {
 
-		int rad = col / 2;
+		double RAD = col / 2 ;
 
-		for (int i = 0; i <= 2 * rad; i++) {
+		// tolerance 
+		double TOL = RAD / 2;
 
-			// for vertical movement
-			for (int j = 0; j <= 2 * rad; j++) {
-				col = sqrt((i - rad) * (i - rad) +
-					(j - rad) * (j - rad));
+		for (int x = -RAD; x <= RAD; x++)
+		{
 
-				// dist should be in the range (radius - 0.5)
-				// and (radius + 0.5) to print stars(*)
-				if (col > rad - 0.5 && col < rad + 0.5)
-					cout << "*";
-				else
-					cout << " ";
+			for (int y = -RAD; y <= RAD; y++)
+			{
+
+				int eq = x * x + y * y - RAD * RAD;
+
+				printf(abs(eq) < TOL ? "*" : " ");
+
 			}
 
-			cout << "\n";
+			printf("\r\n");
+
 		}
 
 	}
