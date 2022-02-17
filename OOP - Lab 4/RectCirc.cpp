@@ -19,28 +19,57 @@ public:
 	void Area() {
 		int area = row * col;
 
-		cout << "Area: " << area << endl;
+		cout << "Rectangle Area: " << area << endl;
 	}
 
 	void Print() {
 
 		char ch = '*';
 		int i, j;
-		for (i = 1; i <= row; i++)
-		{
-			for (j = 1; j <= col; j++)
-			{
-				if (i == 1 || i == row || j == 1 || j == col)
-				{
+		for (i = 1; i <= row; i++) {
+			for (j = 1; j <= col; j++) {
+				if (i == 1 || i == row || j == 1 || j == col) {
 					cout << ch;
-				}
-				else
-				{
+				} else {
 					cout << " ";
 				}
 			}
 			cout << "\n";
 		}
+	}
+
+};
+
+
+class Circle {
+	int row;
+	int col;
+
+public:
+
+	void setRow(int a) {
+		row = a;
+	}
+
+	void setCol(int a) {
+		col = a;
+	}
+
+	void Area() {
+
+		//find radius
+		int rad = col / 2;
+
+		//find area
+		double area = 3.14 * pow(rad, 2);
+		
+		cout << "Circle Area: " << area << endl;
+	}
+
+	void Print() {
+
+
+
 	}
 
 };

@@ -14,6 +14,10 @@ int main(void)
     r.Print();
     r.Area();
 
+    Circle c;
+    c.setCol(6);
+    c.setRow(4);
+    c.Area();
 
 
 }
