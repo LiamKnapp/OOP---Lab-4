@@ -61,10 +61,6 @@ public:
 		cout << "Circle Area: " << area << endl;
 	}
 
-	int pth(int x, int y) {
-		return sqrt(pow(x, 2) + pow(y, 2));
-	}
-
 	void Print() {
 
 		int r = col / 2;
@@ -74,14 +70,13 @@ public:
 		for (int y = width; y >= -width; y -= 2) {
 			for (int x = -length; x <= length; x++) {
 
-				if ((int)pth(x, y) == r) cout << "*";
+				int pth = sqrt(pow(x, 2) + pow(y, 2));
+				if (pth == r) cout << "*";
 				else cout << " ";
 
 			}
 			cout << "\n";
 		}
-		cin.get();
-
 	}
 
 };

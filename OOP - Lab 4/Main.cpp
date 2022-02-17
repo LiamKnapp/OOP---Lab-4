@@ -16,7 +16,7 @@ int main(void)
 
     /*  CIRCLE STUFF  */
     Circle c;
-    c.setCol(15);
+    c.setCol(6);
     c.Print();
     c.Area();
 
