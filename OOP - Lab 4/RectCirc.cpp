@@ -61,28 +61,26 @@ public:
 		cout << "Circle Area: " << area << endl;
 	}
 
+	int pth(int x, int y) {
+		return sqrt(pow(x, 2) + pow(y, 2));
+	}
+
 	void Print() {
 
-		double RAD = col / 2 ;
+		int r = col / 2;
+		const int width = r;
+		const int length = r * 1.5;
 
-		// tolerance 
-		double TOL = RAD / 2;
+		for (int y = width; y >= -width; y -= 2) {
+			for (int x = -length; x <= length; x++) {
 
-		for (int x = -RAD; x <= RAD; x++)
-		{
-
-			for (int y = -RAD; y <= RAD; y++)
-			{
-
-				int eq = x * x + y * y - RAD * RAD;
-
-				printf(abs(eq) < TOL ? "*" : " ");
+				if ((int)pth(x, y) == r) cout << "*";
+				else cout << " ";
 
 			}
-
-			printf("\r\n");
-
+			cout << "\n";
 		}
+		cin.get();
 
 	}
 
