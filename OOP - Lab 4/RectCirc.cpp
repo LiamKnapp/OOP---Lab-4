@@ -63,19 +63,25 @@ public:
 
 	void Print() {
 
-		int r = col / 2;
-		const int width = r;
-		const int length = r * 1.5;
+		int rad = col / 2;
+		int w = rad;
+		int l = rad * 1.5;
+		int y, x;
 
-		for (int y = width; y >= -width; y -= 2) {
-			for (int x = -length; x <= length; x++) {
+		for (y = w; y >= -w; y -= 2) {
+			for (x = -l; x <= l; x++) {
 
-				int pth = sqrt(pow(x, 2) + pow(y, 2));
-				if (pth == r) cout << "*";
-				else cout << " ";
+				int path = sqrt(pow(x, 2) + pow(y, 2));
 
+				if (path == rad) {
+					cout << "*";
+				}
+				else {
+					cout << " ";
+				}
 			}
 			cout << "\n";
+
 		}
 	}
 
