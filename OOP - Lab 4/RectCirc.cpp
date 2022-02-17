@@ -68,13 +68,15 @@ public:
 		int l = rad * 1.5;
 		int y, x;
 
+		char ch = '*';
+
 		for (y = w; y >= -w; y -= 2) {
 			for (x = -l; x <= l; x++) {
 
 				int path = sqrt(pow(x, 2) + pow(y, 2));
 
 				if (path == rad) {
-					cout << "*";
+					cout << ch;
 				}
 				else {
 					cout << " ";
