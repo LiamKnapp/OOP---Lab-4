@@ -1,6 +1,12 @@
 #include "Header.h"
 
-class Rectangle {
+class Shape {
+public:
+	virtual void Draw() = 0 {
+	}
+}; 
+
+class Rectangle: public Shape {
 	int row;
 	int col;
 
@@ -22,7 +28,7 @@ public:
 		cout << "Rectangle Area: " << area << endl;
 	}
 
-	void Print() {
+	void Draw() {
 
 		char ch = '*';
 		int i, j;
@@ -41,7 +47,7 @@ public:
 };
 
 
-class Circle {
+class Circle :public Shape {
 	int col;
 
 public:
@@ -61,7 +67,7 @@ public:
 		cout << "Circle Area: " << area << endl;
 	}
 
-	void Print() {
+	void Draw() {
 
 		int rad = col / 2;
 		int w = rad;
@@ -87,4 +93,48 @@ public:
 		}
 	}
 
+};
+class BMW :public Shape {
+
+public:
+
+	void Draw() {
+		cout << "BMW" << endl;
+		cout << "\t         ** * * * * *" << endl;
+		cout << "\t       *  *       *   *" << endl;
+		cout << "\t     *    *       *     *" << endl;
+		cout << "\t* *  * *  *  *  * * * *  *  *  * *" << endl;
+		cout << "\t*                                 *" << endl;
+		cout << "\t* *  * * *             * * *      *" << endl;
+		cout << "\t    *      *  *  *   *      ** * *" << endl;
+		cout << "\t      *  *             *  *" << endl;
+
+	}
+
+	void Drive() {
+		cout << "Driving a BMW\n" << endl;
+	}
+};
+
+class MAZDA :public Shape {
+
+public:
+
+	void Draw() {
+		cout << "MAZDA" << endl;
+		cout << "\t       * *  * * *" << endl;
+		cout << "\t    * *       *    *" << endl;
+		cout << "\t  *   *       *     *" << endl;
+		cout << "\t* * * *  *  *  * ** *  **  * **" << endl;
+		cout << "\t*                              *" << endl;
+		cout << "\t*                               *" << endl;
+		cout << "\t* ** * * *             *  *     *" << endl;
+		cout << "\t   *       *  *  *   *      * * " << endl;
+		cout << "\t     *   *             *  *" << endl;
+
+	}
+
+	void Drive() {
+		cout << "Driving a Mazda" << endl;
+	}
 };
