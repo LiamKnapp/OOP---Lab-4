@@ -98,24 +98,22 @@ public:
 class Vehicle : public Shape {
 public:
 	virtual void Drive() =0{
-
 	}
-
-
 };
+
 class BMW :public Vehicle {
 
 public:
 
 	void Draw() {
 		cout << "BMW" << endl;
-		cout << "\t         ** * * * * *" << endl;
-		cout << "\t       *  *       *   *" << endl;
-		cout << "\t     *    *       *     *" << endl;
-		cout << "\t* *  * *  *  *  * * * *  *  *  * *" << endl;
+		cout << "\t           ** * * * * *" << endl;
+		cout << "\t         *  *       *   *" << endl;
+		cout << "\t       *    *       *     *" << endl;
+		cout << "\t*  *  * *  *  *  * * * *  *  *  * *" << endl;
 		cout << "\t*                                 *" << endl;
-		cout << "\t* *  * * *             * * *      *" << endl;
-		cout << "\t    *      *  *  *   *      ** * *" << endl;
+		cout << "\t* *  * * *            * * *       *" << endl;
+		cout << "\t    *  *  *  *  * *  *  *  *  *  *" << endl;
 		cout << "\t      *  *             *  *" << endl;
 
 	}
