@@ -4,43 +4,48 @@
 #include "Header.h"
 #include "RectCirc.cpp"
 
+//Polymorphic Draw Function, draws any shape or vehicle.
 void Draw(Shape* shape) {
     shape->Draw();
 
 }
-
+//Polymorphic Drive Function, drives any vehicle.
 void Drive(Vehicle* vehicle) {
     vehicle->Drive();
 }
 
 int main(void)
 {
+    Shape* polymorphicshape = NULL;
+    Vehicle* polymorphicvehicle = NULL;
 
     /*  RECTANGLE STUFF  */
-    Rectangle r;
-    r.setCol(6);
-    r.setRow(4);
-    //r.Print();
-    Draw(&r);
-    r.Area();
+    Rectangle rectangle;
+    rectangle.setCol(6);
+    rectangle.setRow(4);
+    polymorphicshape = &rectangle;
+    Draw(polymorphicshape);
+    rectangle.Area();
 
     /*  CIRCLE STUFF  */
-    Circle c;
-    c.setCol(6);
-    //c.Print();
-    Draw(&c);
-    c.Area();
+    Circle circle;
+    circle.setCol(6);
+    polymorphicshape = &circle;
+    Draw(polymorphicshape);
+    circle.Area();
 
     /* BMW STUFF*/
-    BMW b;
-
-    Draw(&b);
-    Drive(&b);
-
+    BMW bmw;
+    polymorphicshape = &bmw;
+    polymorphicvehicle = &bmw; 
+    Draw(polymorphicshape); 
+    Drive(polymorphicvehicle);   
 
     /* MAZDA STUFF*/
-    MAZDA m;
-    Draw(&m);
-    Drive(&m); 
+    MAZDA mazda;
+    polymorphicshape = &mazda;
+    polymorphicvehicle = &mazda;
+    Draw(polymorphicshape);
+    Drive(polymorphicvehicle); 
    
 }
