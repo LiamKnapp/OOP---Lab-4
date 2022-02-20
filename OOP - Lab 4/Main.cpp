@@ -9,6 +9,10 @@ void Draw(Shape* shape) {
 
 }
 
+void Drive(Vehicle* vehicle) {
+    vehicle->Drive();
+}
+
 int main(void)
 {
 
@@ -31,12 +35,12 @@ int main(void)
     BMW b;
 
     Draw(&b);
-    b.Drive();
+    Drive(&b);
 
 
     /* MAZDA STUFF*/
     MAZDA m;
     Draw(&m);
-    m.Drive();
-
+    Drive(&m); 
+   
 }

@@ -7,8 +7,8 @@ public:
 }; 
 
 class Rectangle: public Shape {
-	int row;
-	int col;
+	int row=0;
+	int col=0;
 
 public:
 
@@ -48,7 +48,7 @@ public:
 
 
 class Circle :public Shape {
-	int col;
+	int col=0;
 
 public:
 
@@ -94,7 +94,16 @@ public:
 	}
 
 };
-class BMW :public Shape {
+
+class Vehicle : public Shape {
+public:
+	virtual void Drive() =0{
+
+	}
+
+
+};
+class BMW :public Vehicle {
 
 public:
 
@@ -116,7 +125,7 @@ public:
 	}
 };
 
-class MAZDA :public Shape {
+class MAZDA :public Vehicle {
 
 public:
 
